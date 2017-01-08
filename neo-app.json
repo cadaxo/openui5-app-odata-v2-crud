@@ -1,0 +1,35 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources",
+        "version": "1.38.11"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources",
+        "version": "1.38.11"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/destinations/northwind2",
+      "target": {
+        "type": "destination",
+        "name": "northwind2",
+        "entryPath": "/"
+      },
+      "description": "Northwind ODATA V2"
+    }
+  ],
+  "sendWelcomeFileRedirect": true
+}
