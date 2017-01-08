@@ -19,7 +19,8 @@ sap.ui.define([
 			var sId = this._getNewId();
 			var sName = this.getView().byId("cdx-inputName").getValue();
 			 this.getView().getModel("northwind").create("/Suppliers",{"ID":sId, "Name":sName},{
-			 	error: function (oError) { console.log(oError); },
+			 	error: function (oError) { //console.log(oError); 
+			 	},
 			 	success: function (oData, response) { MessageToast.show("Succesfully created!"); }
 			 });
 		},
@@ -44,7 +45,7 @@ sap.ui.define([
 			
 		},
 		onGetId: function (oEvent) {
-			alert(this._getNewId());
+			//alert(this._getNewId());
 		},
 		onDeleteModePressed: function (oEvent) {
 			var oBtn = oEvent.getSource();
