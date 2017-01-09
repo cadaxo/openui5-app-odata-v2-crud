@@ -5,10 +5,6 @@ sap.ui.define([
 	"use strict";
 	
 	return Controller.extend("cadaxo.ui5.app.controller.App", {
-		// Load Resource bundle - i18n properties
-		getResourceBundle: function() {
-			return this.getOwnerComponent().getModel("i18n").getResourceBundle();
-		},
 		// Handling when user click on item from the list
 		onListItemPressed: function (oEvent) {
 			var oItem = oEvent.getSource();
@@ -24,16 +20,17 @@ sap.ui.define([
 			
 			if (oBtn.getPressed()) {
 				oList.setMode("Delete");
-				oBtn.setText(this.getResourceBundle().getText("deletionModeOn"));
+				oBtn.setText(this._getResourceBundle().getText("deletionModeOn"));
 			} else {
 				oList.setMode("None");
-				oBtn.setText(this.getResourceBundle().getText("deletionModeOff"));
+				oBtn.setText(this._getResourceBundle().getText("deletionModeOff"));
 			}
 		},
 		// Handlig Item delete
 		onListItemDeleted: function (oEvent) {
 			var sPath = oEvent.getParameters().listItem.getBindingContext("northwind").getPath();
-			var sDeleteSuccess = this.getResourceBundle().getText("deleteSuccess");
+			var sDeleteSuccess = this._getResourceBundle().getText("deleteSuccess");
+			// ODATA DELETE OPERATION
 			this.getView().getModel("northwind").remove(
 				sPath,{
 					success: function (oData, response) {
@@ -49,9 +46,10 @@ sap.ui.define([
 			var sId = this._getNewId();
 			var oInput = oView.byId("cdx-inputName");
 			var sInputValue = oInput.getValue();
-			var sCreateSuccess = this.getResourceBundle().getText("createSuccess");
+			var sCreateSuccess = this._getResourceBundle().getText("createSuccess");
 			var that = this;
 			
+			// ODATA CREATE OPERATION
 			oView.getModel("northwind").create(
 			 	"/Suppliers",{"ID":sId, "Name":sInputValue},{
 			 	error: function (oError) { MessageToast.show(oError);  },
@@ -62,25 +60,17 @@ sap.ui.define([
 			 	}
 			 });
 		},
-		onInputChange: function (oEvent) {
-			var oView = this.getView();
-			var oInput = oView.byId("cdx-inputName");
-			if (oInput.getValue().length > 0) {
-				oView.byId("cdx-btnSaveAsNew").setEnabled(true);
-			} else {
-				this._setSaveButtons(false);
-			}
-		},
 		//Handling Update item
 		onSavePressed: function (oEvent) {
 			var oView = this.getView();
 			var oInput = oView.byId("cdx-inputName");
 			var sInputValue = oInput.getValue();
 			var sPath = oView.byId("cdx-panel1").getElementBinding("northwind").getPath();
-			var sUpdateSuccess = this.getResourceBundle().getText("updateSuccess");
+			var sUpdateSuccess = this._getResourceBundle().getText("updateSuccess");
 			var oPanel = oView.byId("cdx-panel1");
 			var that = this;
 			
+			// ODATA UPDATE OPERATION
 			oView.getModel("northwind").update(sPath, {"Name": sInputValue},{
 				error: function (oError) { MessageToast.show(oError); },
 				success: function (oData, response) {
@@ -91,6 +81,20 @@ sap.ui.define([
 				}
 			});
 			
+		},
+		//Handling input value change
+		onInputChange: function (oEvent) {
+			var oView = this.getView();
+			var oInput = oView.byId("cdx-inputName");
+			if (oInput.getValue().length > 0) {
+				oView.byId("cdx-btnSaveAsNew").setEnabled(true);
+			} else {
+				this._setSaveButtons(false);
+			}
+		},
+		// Load Resource bundle - i18n properties
+		_getResourceBundle: function() {
+			return this.getOwnerComponent().getModel("i18n").getResourceBundle();
 		},
 		// Set both save buttons at once
 		_setSaveButtons: function (bValue) {
