@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": true,
+    "lastBuildDateTime": "Sun, 08 Jan 2017 15:02:43 GMT"
   },
   "generation": [
     {
@@ -33,5 +34,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "a17cc5c5c",
+    "name": "odata2crud",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

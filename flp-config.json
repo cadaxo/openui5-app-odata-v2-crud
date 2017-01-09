@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "odata2crud",
+        "description": "SAPUI5 OData V2 CRUD Example",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#odata2crud-Display",
+        "navigationComponentName": "cadaxo.ui5.app",
+        "intentSemanticObject": "odata2crud",
+        "intentAction": "Display",
+        "html5ApplicationName": "odata2crud",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "00000000-0000-1111-0000-00000000"
+        ],
+        "contentPackages": [
+            "00000000-0000-2222-0000-00000000"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Odata V2 CRUD Example",
+        "subtitle": "How to CREATE, READ, UPDATE, DELETE with Odata",
+        "searchKeywords": "Odata V2 CRUD Example,How to CREATE, READ, UPDATE, DELETE with Odata",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

@@ -8,17 +8,19 @@
 						<Label text="Name:" class="sapUiSmallMargin"></Label>
 						<Input id="cdx-inputName" value="{northwind>Name}" liveChange="onInputChange" width="200px"></Input>
 					</Panel>
-					<List id="cdx-list" items="{northwind>/Suppliers}" delete="onListItemDeleted">
-						<items>
-							<StandardListItem title="{northwind>Name}" type="Navigation" press="onListItemPressed"> 
-							</StandardListItem>
-						</items>
-					</List>
+					<Panel id="cdx-panel2" headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
+						<List id="cdx-list" items="{northwind>/Suppliers}" delete="onListItemDeleted">
+							<items>
+								<StandardListItem title="{northwind>Name}" type="Navigation" press="onListItemPressed"> 
+								</StandardListItem>
+							</items>
+						</List>
+					</Panel>
 				</content>
 				<footer>
 					<Bar>
 						<contentRight>
-							<Button id="cdx-btnSave" text="Save" icon="sap-icon://refresh" enabled="false"></Button>
+							<Button id="cdx-btnSave" text="Save" icon="sap-icon://refresh" enabled="false" press="onSavePressed"></Button>
 							<Button id="cdx-btnSaveAsNew" text="Save As New" icon="sap-icon://save" enabled="false" press="onSaveAsNewPressed"></Button>
 							<ToggleButton icon="sap-icon://delete" text="Deletion Mode: Off" press="onDeleteModePressed"></ToggleButton>
 						</contentRight>
