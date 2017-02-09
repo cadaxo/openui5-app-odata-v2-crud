@@ -1,4 +1,4 @@
-# Cadaxo SAPUI5 OData V2 CRUD simple app
+# Cadaxo OPENUI5 OData V2 CRUD
 
 ## Description
 This UI5 app is an example of communication between a real OData V2 Backend service and SAPUI5 app. As the backend source of data we used the public Read-Write [services.odata.org](http://services.odata.org/) service.
