@@ -7,13 +7,18 @@
     "targetFolder": "dist",
     "sourceFolder": "webapp",
     "buildRequired": true,
-    "lastBuildDateTime": "Sun, 08 Jan 2017 15:02:43 GMT"
+    "lastBuildDateTime": "Mon, 09 Jan 2017 15:30:48 GMT"
   },
   "generation": [
     {
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.38.11",
       "dateTimeStamp": "Sat, 07 Jan 2017 19:44:30 GMT"
+    },
+    {
+      "templateId": "com.sap.webide.annotationmodeller.CreateAnnotationTemplate",
+      "templateVersion": "1.0.0",
+      "dateTimeStamp": "Tue, 10 Jan 2017 14:53:19 GMT"
     }
   ],
   "translation": {
@@ -38,6 +43,6 @@
   "hcpdeploy": {
     "account": "a17cc5c5c",
     "name": "odata2crud",
-    "lastVersionWeTriedToDeploy": "1.0.0"
+    "lastVersionWeTriedToDeploy": "1.0.1"
   }
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>Cadaxo SAPUI5 OData V2 CRUD simple app - TEST</title>
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"cadaxo.ui5.app": "../"}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				
+				sap.ui.require([
+					"cadaxo/ui5/app/localService/mockserver",
+					"sap/m/Shell",
+					"sap/ui/core/ComponentContainer"
+				], function (mockserver, Shell, ComponentContainer) {
+					mockserver.init();
+
+					new Shell({
+						app : new ComponentContainer({
+							height: "100%",
+							name: "cadaxo.ui5.app"
+						})
+					}).placeAt("content");
+				});
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

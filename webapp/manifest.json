@@ -11,15 +11,25 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.38.11"
+			"id": "com.sap.webide.annotationmodeller.CreateAnnotationTemplate",
+			"version": "1.0.0"
 		},
 		"dataSources": {
 			"northwind": {
 				"uri": "/destinations/northwind2/",
 				"type": "OData",
 				"settings": {
-					"odataVersion": "2.0"
+					"odataVersion": "2.0",
+					"annotations": [
+						"annotation"
+					]
+				}
+			},
+			"annotation": {
+				"uri": "localService/annotation.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/annotation.xml"
 				}
 			}
 		}
