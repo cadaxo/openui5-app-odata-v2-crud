@@ -1,0 +1,31 @@
+{
+  "name": "openui5-app-odata-v2-crud",
+  "version": "1.0.0",
+  "description": "Cadaxo OPENIU5 CRUD ODATA V2 app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cadaxo/openui5-app-odata-v2-crud.git"
+  },
+  "keywords": [
+    "OPENUI5",
+    "Fiori",
+    "ODATA"
+  ],
+  "author": "Dusan.Sacha@cadaxo.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cadaxo/openui5-app-odata-v2-crud/issues"
+  },
+  "homepage": "https://github.com/cadaxo/openui5-app-odata-v2-crud#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
