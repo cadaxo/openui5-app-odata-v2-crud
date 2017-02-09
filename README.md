@@ -6,7 +6,8 @@ This UI5 app is an example of communication between a real OData V2 Backend serv
 The app was implemented for learning purposes and/or for other SAPUI5 developers just to see how we implemented the four basic operations - Create, Read, Update, Delete.
 
 ## Live
-You can check the live version of this app running on Hana Cloud Platform [HERE](https://odata2crud-a17cc5c5c.dispatcher.hana.ondemand.com/index.html?hc_reset). To lanuch and re-develope the project, please check the Setup.
+Check it [HERE](https://odata2crud-a17cc5c5c.dispatcher.hana.ondemand.com/index.html?hc_reset)!
+App is running on our Hana Cloud Platform. To lanuch and re-develope the project localy, please check the Setup.
 
 ## Setup
 The application was developed in SAP WEB IDE and is launched on Hana Cloud Platform. You can clone it, import it to your SAP WEB IDE and then run the index.html file.
