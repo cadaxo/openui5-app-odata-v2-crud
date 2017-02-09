@@ -72,5 +72,4 @@ Email: dusan.sacha@cadaxo.com
 Twitter: [sacha_dusan](http://twitter.com/sacha_dusan)
 
 ## License
-Copyright © 2017, Cadaxo  
 This project is licensed under the MIT license.
