@@ -1,11 +1,11 @@
 # Cadaxo OPENUI5 OData V2 CRUD
 
-This is an OPENUI5 app for all UI5 learners. It is a simple app with one view which makes basic OData operations (Create, Read, Update, Delete). As the backend source of data, the public Read-Write [services.odata.org](http://services.odata.org/) OData service is being used. Anyone can join, contribute and make this app better.
+This is an Openui5 app for all UI5 learners. It is a simple app with one view which makes basic OData operations (Create, Read, Update, Delete). As the backend source of data, the public Read-Write [services.odata.org](http://services.odata.org/) OData service is being used. Anyone can join, contribute and make this app better.
 
 ## How to start
 Check the [CURRENT LIVE VERSION](https://odata2crud-a17cc5c5c.dispatcher.hana.ondemand.com/index.html?hc_reset) deployed to HCP.
 
-As you can see it is very simple OPENUI5 app connected to real ODATA Backend. In this app you can see the list of products, edit the products, create new products or delete products. Feel free to play around!
+As you can see it is very simple OpenUI5 app connected to real Odata Backend. In this app you can see the list of products, edit the products, create new products or delete products. Feel free to play around!
 
 The app is not perfect, but anyone can contribute and make it better. Check our [current issues](https://github.com/cadaxo/openui5-app-odata-v2-crud/issues) or, if you have something on mind how to make it better, [create your own issue](https://github.com/cadaxo/openui5-app-odata-v2-crud/issues/new).
 
@@ -34,7 +34,8 @@ npm start
 If all steps were successfull, you can now open `http://localhost:5000/webapp/test/mockServer.html` in your browser to see the app runing with the mock data.
 
 ### Northwind Destination configuration on Hana Cloud Platform
-The backend service was configured in Hana Cloud Platform destinations with following content:
+If you are developing in WEB IDE, you can open the app with (index.html) Northwind OData service data. Your service needs to be configured on your HCP Destinations like this:
+
 - Name - northwind2  
 - Type - HTTP
 - URL - http://services.odata.org/V2/(S(yt52emowdvohwbsq12q2ak0a))/OData/OData.svc/
